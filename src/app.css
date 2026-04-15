@@ -1,0 +1,51 @@
+:root {
+  --ink: #1f1a12;
+  --ink-soft: #4a3f32;
+  --ink-faint: #7a6a55;
+  --paper: #f4ece0;
+  --paper-deep: #ecdfc7;
+  --paper-edge: #d9c8a7;
+  --rule: #6b553a;
+  --accent: #6b2a1a;
+  --font-body: "IM Fell English", "IM Fell DW Pica", Georgia, serif;
+  --font-smallcaps: "IM Fell English SC", Georgia, serif;
+  --font-masthead: "UnifrakturMaguntia", "IM Fell English", serif;
+  --measure: 34rem;
+  --measure-wide: 56rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.18rem;
+  line-height: 1.68;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(107, 85, 58, 0.05), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(107, 85, 58, 0.07), transparent 60%);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(107, 42, 26, 0.25);
+  transition: border-color 150ms ease;
+}
+a:hover { border-bottom-color: var(--accent); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-body);
+  font-weight: normal;
+  color: var(--ink);
+}
+
+p { margin: 0 0 1.1em; }
+
+::selection { background: rgba(107, 42, 26, 0.18); }
