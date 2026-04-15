@@ -4,6 +4,7 @@
   const tabs = [
     { href: '/', label: 'Voorwoorde', match: (p) => p === '/' || p.startsWith('/heil') },
     { href: '/prosa', label: 'Prosa', match: (p) => p.startsWith('/prosa') },
+    { href: '/argief', label: 'Argief', match: (p) => p.startsWith('/argief') },
     { href: '/kontak', label: 'Kontak', match: (p) => p.startsWith('/kontak') },
     { href: '/oor', label: 'Oor', match: (p) => p.startsWith('/oor') }
   ];

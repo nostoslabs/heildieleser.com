@@ -11,3 +11,8 @@ vite.config.ts.timestamp-*
 .DS_Store
 .claude/
 .vercel
+
+# Working dump of unsorted source material from old backups.
+# Curated copies are committed under static/archive/ and docs/md/.
+/docs/archive/
+/docs/assets/
