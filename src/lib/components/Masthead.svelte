@@ -1,13 +1,19 @@
+<script>
+  import { t, langPath } from '$lib/i18n.js';
+  let { lang = 'af' } = $props();
+  let home = $derived(langPath('/', lang));
+</script>
+
 <header class="masthead">
   <div class="date-line">
     <span>Wellington</span>
     <span>·</span>
     <span>Wamakersvallei</span>
     <span>·</span>
-    <span>Val de Charron</span>
+    <span>Val du Charron</span>
   </div>
-  <h1 class="title"><a href="/">Heil die Leser</a></h1>
-  <p class="subtitle">Maandelikse voorwoord · Amanda Kreitzer</p>
+  <h1 class="title"><a href={home}>Heil die Leser</a></h1>
+  <p class="subtitle">{t('site.subtitle', lang)}</p>
   <div class="rule" aria-hidden="true"></div>
 </header>
 

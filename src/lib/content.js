@@ -40,15 +40,25 @@ const editorialModules = import.meta.glob('/docs/md/editorials/*.md', {
   eager: true
 });
 
+const editorialModulesEn = import.meta.glob('/docs/md/editorials-en/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true
+});
+
 const proseModules = import.meta.glob('/docs/md/prose/*.md', {
   query: '?raw',
   import: 'default',
   eager: true
 });
 
-export const editorials = load(editorialModules).sort((a, b) =>
-  (b.date ?? '').localeCompare(a.date ?? '')
+const editorialsEnBySlug = new Map(
+  load(editorialModulesEn).map((e) => [e.slug, e])
 );
+
+export const editorials = load(editorialModules)
+  .map((e) => ({ ...e, en: editorialsEnBySlug.get(e.slug) ?? null }))
+  .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
 
 export const prose = load(proseModules).sort((a, b) =>
   (a.title ?? '').localeCompare(b.title ?? '')

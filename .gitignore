@@ -16,3 +16,7 @@ vite.config.ts.timestamp-*
 # Curated copies are committed under static/archive/ and docs/md/.
 /docs/archive/
 /docs/assets/
+
+# Playwright MCP screenshots
+/.playwright-mcp/
+/*.png
